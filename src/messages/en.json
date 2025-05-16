@@ -1,0 +1,58 @@
+{
+  "Auth": {
+    "error_title": "Authentication Error",
+    "error_details": "Error Details",
+    "error_code": "Error Code",
+    "error_description": "Error Description",
+    "try_again": "Try Again",
+    "back_to_home": "Back to Home",
+    "sign_in": "Sign In",
+    "sign_in_with_keycloak": "Sign in with Keycloak"
+  },
+  "Dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome",
+    "welcome_message": "Welcome back, {name}!",
+    "quick_actions": "Quick Actions",
+    "start_trading": "Start Trading",
+    "view_settings": "View Settings",
+    "account_summary": "Account Summary",
+    "email": "Email",
+    "language": "Language"
+  },
+  "Settings": {
+    "title": "Settings",
+    "profile": "Profile",
+    "email": "Email",
+    "name": "Name",
+    "preferences": "Preferences",
+    "language": "Language",
+    "logout": "Logout"
+  },
+  "Trade": {
+    "title": "Trading Platform",
+    "trading_platform": "Trading Platform",
+    "welcome_message": "Welcome to the trading platform, {name}!",
+    "market_overview": "Market Overview",
+    "btc_price": "Bitcoin Price",
+    "eth_price": "Ethereum Price",
+    "trading_pairs": "Trading Pairs",
+    "volume": "24h Volume",
+    "back_to_dashboard": "Back to Dashboard"
+  },
+  "Index": {
+    "title": "Crypto Trading Platform",
+    "description": "Professional cryptocurrency trading platform with advanced features",
+    "get_started": "Get Started",
+    "learn_more": "Learn More",
+    "features": {
+      "title": "Features",
+      "trading": "Advanced Trading",
+      "trading_desc": "Professional trading tools and real-time market data",
+      "security": "Security",
+      "security_desc": "Enterprise-grade security for your assets",
+      "analytics": "Analytics",
+      "analytics_desc": "Advanced analytics and reporting tools"
+    }
+  }
+}

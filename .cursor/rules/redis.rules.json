@@ -1,0 +1,11 @@
+{
+  "rules": [
+    {
+      "name": "Allow all Redis operations",
+      "description": "Allow all operations on Redis cache",
+      "path": "/",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "allow": true
+    }
+  ]
+} 

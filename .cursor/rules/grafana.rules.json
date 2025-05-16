@@ -1,0 +1,11 @@
+{
+  "rules": [
+    {
+      "name": "Allow all Grafana operations",
+      "description": "Allow all operations on Grafana API",
+      "path": "/",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "allow": true
+    }
+  ]
+} 

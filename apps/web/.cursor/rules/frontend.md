@@ -1,0 +1,12 @@
+---
+description: Next 14 + Tailwind + shadcn/ui style-guide
+globs:
+  - "**/*.tsx"
+  - "**/*.css"
+---
+
+- Страницы = `app/[locale]/.../page.tsx`; всё остальное — в `components/` или `lib/`.  
+- **Нет inline-style** — только Tailwind / shadcn props.  
+- Новая UI-деталь → Storybook story + Playwright a11y-test (use `expect(await page.accessibility.snapshot())`).  
+- Люциде-иконки по умолчанию `size={16}`; кастомные SVG хранятся в `/public/assets`.  
+- Графики TradingView берут цвет из `var(--color-primary)`; альтернативную палитру генерируй через theme-toggle. 

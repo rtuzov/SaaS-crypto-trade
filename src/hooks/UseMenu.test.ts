@@ -1,3 +1,5 @@
+'use client';
+
 import { act, renderHook } from '@testing-library/react';
 
 import { useMenu } from './UseMenu';

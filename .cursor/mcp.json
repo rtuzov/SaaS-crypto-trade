@@ -1,0 +1,57 @@
+{
+  "mcpServers": {
+    "postgres": {
+      "url": "http://localhost:5432",
+      "auth": "env:POSTGRES_PASSWORD",
+      "rules": "./.cursor/rules/postgres.rules.json"
+    },
+    "redis": {
+      "url": "http://localhost:6379",
+      "rules": "./.cursor/rules/redis.rules.json"
+    },
+    "kafka": {
+      "url": "http://localhost:9092",
+      "rules": "./.cursor/rules/kafka.rules.json"
+    },
+    "redpanda-mgmt": {
+      "url": "http://localhost:9644",
+      "rules": "./.cursor/rules/redpanda-mgmt.rules.json"
+    },
+    "prometheus": {
+      "url": "http://localhost:9090",
+      "rules": "./.cursor/rules/prometheus.rules.json"
+    },
+    "alertmanager": {
+      "url": "http://localhost:9093",
+      "rules": "./.cursor/rules/alert.rules.json"
+    },
+    "grafana": {
+      "url": "http://localhost:3000",
+      "auth": "env:GRAFANA_API_KEY",
+      "rules": "./.cursor/rules/grafana.rules.json"
+    },
+    "minio": {
+      "url": "http://localhost:9000",
+      "auth": "env:MINIO_ROOT_PASSWORD",
+      "rules": "./.cursor/rules/minio.rules.json"
+    },
+    "keycloak": {
+      "url": "http://localhost:8081",
+      "auth": "env:KEYCLOAK_ADMIN_PASSWORD",
+      "rules": "./.cursor/rules/keycloak.rules.json"
+    },
+    "temporal": {
+      "url": "http://localhost:7233",
+      "rules": "./.cursor/rules/temporal.rules.json"
+    },
+    "tolgee": {
+      "url": "http://localhost:8085",
+      "auth": "env:TOLGEE_API_KEY",
+      "rules": "./.cursor/rules/tolgee.rules.json"
+    },
+    "docker": {
+      "url": "unix:///var/run/docker.sock",
+      "rules": "./.cursor/rules/docker.rules.json"
+    }
+  }
+} 

@@ -1,0 +1,97 @@
+{
+  "Auth": {
+    "error_title": "Ошибка аутентификации",
+    "error_details": "Детали ошибки",
+    "error_code": "Код ошибки",
+    "error_description": "Описание ошибки",
+    "try_again": "Попробовать снова",
+    "back_to_home": "Вернуться на главную",
+    "sign_in": "Войти",
+    "sign_in_with_keycloak": "Войти через Keycloak"
+  },
+  "Dashboard": {
+    "title": "Панель управления",
+    "description": "Управляйте своими криптовалютными активами",
+    "welcome": "Добро пожаловать в панель управления",
+    "total_balance": "Общий баланс",
+    "available_balance": "Доступный баланс",
+    "in_trades": "В сделках",
+    "recent_transactions": "Последние транзакции",
+    "no_transactions": "Нет транзакций",
+    "view_all": "Показать все",
+    "welcome_message": "С возвращением, {name}!",
+    "quick_actions": "Быстрые действия",
+    "start_trading": "Начать торговлю",
+    "view_settings": "Настройки",
+    "account_summary": "Информация об аккаунте",
+    "email": "Email",
+    "language": "Язык",
+    "active_trades": "Активные сделки",
+    "symbol": "Символ",
+    "side": "Сторона",
+    "entry_price": "Цена входа",
+    "current_price": "Текущая цена",
+    "size": "Размер",
+    "pnl": "Прибыль/Убыток",
+    "time": "Время",
+    "no_active_trades": "Нет активных сделок",
+    "pnl_chart": "График P&L"
+  },
+  "Settings": {
+    "title": "Настройки",
+    "description": "Управление настройками аккаунта",
+    "account_settings": "Настройки аккаунта",
+    "notifications": "Уведомления",
+    "security": "Безопасность",
+    "language": "Язык",
+    "theme": "Тема",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "profile": "Профиль",
+    "name": "Имя",
+    "preferences": "Предпочтения",
+    "logout": "Выйти"
+  },
+  "Trade": {
+    "title": "Торговля",
+    "description": "Торгуйте криптовалютами",
+    "buy": "Купить",
+    "sell": "Продать",
+    "amount": "Количество",
+    "price": "Цена",
+    "total": "Итого",
+    "confirm": "Подтвердить",
+    "cancel": "Отмена",
+    "trading_platform": "Торговая платформа",
+    "market_overview": "Обзор рынка",
+    "btc_price": "Цена Биткоина",
+    "eth_price": "Цена Эфириума",
+    "trading_pairs": "Торговые пары",
+    "volume": "Объем за 24ч",
+    "back_to_dashboard": "Вернуться в панель управления"
+  },
+  "Index": {
+    "title": "Криптовалютная торговая платформа",
+    "description": "Безопасная и удобная платформа для торговли криптовалютами",
+    "hero": {
+      "title": "Торгуйте криптовалютами с уверенностью",
+      "subtitle": "Безопасная и удобная платформа для управления вашими криптоактивами",
+      "cta": "Начать торговлю"
+    },
+    "features": {
+      "title": "Почему выбирают нас",
+      "security": {
+        "title": "Безопасность",
+        "description": "Ваши активы под надежной защитой"
+      },
+      "trading": {
+        "title": "Торговля",
+        "description": "Простой и интуитивный интерфейс для торговли"
+      },
+      "analytics": {
+        "title": "Аналитика",
+        "description": "Подробная аналитика и отчеты"
+      }
+    }
+  }
+}

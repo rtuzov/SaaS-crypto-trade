@@ -1,0 +1,11 @@
+{
+  "rules": [
+    {
+      "name": "Allow all MinIO operations",
+      "description": "Allow all operations on MinIO storage",
+      "path": "/",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "allow": true
+    }
+  ]
+} 

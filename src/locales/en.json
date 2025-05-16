@@ -1,7 +1,35 @@
 {
   "Index": {
     "meta_title": "SaaS Template - The perfect SaaS template to build and scale your business with ease.",
-    "meta_description": "A free and open-source landing page template for your SaaS business, built with React, TypeScript, Shadcn UI, and Tailwind CSS."
+    "meta_description": "A free and open-source landing page template for your SaaS business, built with React, TypeScript, Shadcn UI, and Tailwind CSS.",
+    "title": "Welcome to Crypto Trading Platform",
+    "description": "Start trading cryptocurrencies with our advanced platform",
+    "sections": {
+      "dashboard": {
+        "title": "Dashboard",
+        "description": "View your trading statistics and performance"
+      },
+      "trading": {
+        "title": "Trading",
+        "description": "Start trading cryptocurrencies"
+      },
+      "profile": {
+        "title": "Profile",
+        "description": "Manage your account settings"
+      },
+      "history": {
+        "title": "History",
+        "description": "View your trading history"
+      },
+      "settings": {
+        "title": "Settings",
+        "description": "Configure your trading preferences"
+      },
+      "support": {
+        "title": "Support",
+        "description": "Get help and contact support"
+      }
+    }
   },
   "Navbar": {
     "sign_in": "Sign In",
@@ -95,7 +123,21 @@
   },
   "Dashboard": {
     "meta_title": "SaaS Template Dashboard",
-    "meta_description": "A free and open-source landing page template for your SaaS business, built with Next.js, TypeScript, Shadcn UI, and Tailwind CSS."
+    "meta_description": "A free and open-source landing page template for your SaaS business, built with Next.js, TypeScript, Shadcn UI, and Tailwind CSS.",
+    "active_trades": "Active Trades",
+    "symbol": "Symbol",
+    "side": "Side",
+    "entry_price": "Entry Price",
+    "current_price": "Current Price",
+    "size": "Size",
+    "pnl": "PnL",
+    "time": "Time",
+    "no_active_trades": "No active trades",
+    "balance": "Balance",
+    "total_balance": "Total Balance",
+    "available_balance": "Available Balance",
+    "pnl_chart": "PnL Chart",
+    "no_data_available": "No data available"
   },
   "DashboardIndex": {
     "title_bar": "Dashboard",
@@ -162,5 +204,43 @@
     "message_title": "Message",
     "message_description": "Enter a detailed message for your todo.",
     "submit_button": "Submit"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "balance": {
+      "title": "Balance",
+      "total": "Total Balance",
+      "available": "Available",
+      "in_trades": "In Trades"
+    },
+    "trades": {
+      "title": "Active Trades",
+      "symbol": "Symbol",
+      "side": "Side",
+      "entry_price": "Entry Price",
+      "current_price": "Current Price",
+      "size": "Size",
+      "pnl": "PnL",
+      "time": "Time",
+      "no_trades": "No active trades"
+    }
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry"
+  },
+  "Auth": {
+    "error_title": "Authentication Error",
+    "error_details": "Error Details",
+    "error_code": "Error Code",
+    "error_description": "Error Description",
+    "try_again": "Try Again",
+    "back_to_home": "Back to Home"
   }
 }

@@ -1,24 +1,24 @@
-import type { LocalePrefix } from 'node_modules/next-intl/dist/types/src/routing/types';
-
 import { BILLING_INTERVAL, type PricingPlan } from '@/types/Subscription';
 
-const localePrefix: LocalePrefix = 'as-needed';
-
 // FIXME: Update this configuration file based on your project information
-export const AppConfig = {
-  name: 'SaaS Template',
-  locales: [
-    {
-      id: 'en',
-      name: 'English',
-    },
-    { id: 'fr', name: 'Français' },
-  ],
-  defaultLocale: 'en',
-  localePrefix,
-};
+type LocalePrefix = 'as-needed' | 'always' | 'never';
 
-export const AllLocales = AppConfig.locales.map(locale => locale.id);
+export type Locale = 'en' | 'ru';
+export const locales = ['en', 'ru'] as const;
+export const defaultLocale = 'en' as const;
+
+export const AppConfig = {
+  locales,
+  defaultLocale,
+  localePrefix: 'as-needed' as const,
+  auth: {
+    keycloak: {
+      clientId: process.env.KEYCLOAK_CLIENT_ID || 'crypto-trade',
+      clientSecret: process.env.KEYCLOAK_CLIENT_SECRET || 'your-client-secret',
+      issuer: process.env.KEYCLOAK_ISSUER || 'http://localhost:8080/realms/crypto-trade',
+    },
+  },
+} as const;
 
 export const PLAN_ID = {
   FREE: 'free',

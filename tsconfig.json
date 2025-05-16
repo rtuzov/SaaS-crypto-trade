@@ -3,7 +3,7 @@
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "removeComments": true,
     "preserveConstEnums": true,
@@ -20,7 +20,7 @@
     "allowUnreachableCode": false,
     "noFallthroughCasesInSwitch": true,
 
-    "target": "es2017",
+    "target": "es5",
     "outDir": "out",
     "sourceMap": true,
 
@@ -37,12 +37,13 @@
     "incremental": true,
 
     // Load types
-    "types": ["vitest/globals"],
+    "types": ["next", "next/types/global", "next-intl", "vitest/globals"],
 
     // Path aliases
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
+      "@/libs/*": ["./src/libs/*"],
       "@/public/*": ["./public/*"]
     },
 
@@ -65,6 +66,7 @@
     "**/*.tsx",
     ".storybook/*.ts",
     ".next/types/**/*.ts",
+    "src/types/**/*.d.ts",
     "**/*.mts"
   ]
 }
