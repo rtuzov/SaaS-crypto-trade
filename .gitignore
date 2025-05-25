@@ -89,3 +89,6 @@ ENV/
 
 # Logs
 *.log
+
+# API Keys
+crypto_scripts/async_main2.py
