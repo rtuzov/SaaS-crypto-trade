@@ -1,0 +1,80 @@
+groups:
+  - name: service_alerts
+    rules:
+      - alert: ServiceDown
+        expr: up == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: Service {{ $labels.job }} is down
+          description: Service {{ $labels.job }} has been down for more than 1 minute
+
+      - alert: HighErrorRate
+        expr: rate(http_requests_total{status=~"5.."}[5m]) / rate(http_requests_total[5m]) > 0.1
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: High error rate in {{ $labels.job }}
+          description: Error rate is above 10% for the last 5 minutes
+
+      - alert: HighLatency
+        expr: histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m])) > 1
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: High latency in {{ $labels.job }}
+          description: 95th percentile latency is above 1 second
+
+  - name: business_alerts
+    rules:
+      - alert: HighTradeVolume
+        expr: rate(trade_volume_total[5m]) > 1000
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: High trade volume detected
+          description: Trade volume is above 1000 trades per 5 minutes
+
+      - alert: HighLossRate
+        expr: rate(trade_pnl_total{result="loss"}[1h]) / rate(trade_pnl_total[1h]) > 0.3
+        for: 1h
+        labels:
+          severity: critical
+        annotations:
+          summary: High loss rate detected
+          description: Loss rate is above 30% for the last hour
+
+  - name: resource_alerts
+    rules:
+      - alert: HighMemoryUsage
+        expr: (node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes) / node_memory_MemTotal_bytes > 0.9
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: High memory usage on {{ $labels.instance }}
+          description: Memory usage is above 90% for 5 minutes
+
+      - alert: HighCPUUsage
+        expr: 100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 80
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: High CPU usage on {{ $labels.instance }}
+          description: CPU usage is above 80% for 5 minutes
+
+  - name: test_alerts
+    rules:
+      - alert: TestAlert
+        expr: vector(1)
+        for: 1s
+        labels:
+          severity: warning
+        annotations:
+          summary: Test alert for Telegram
+          description: This is a test alert to verify Telegram notifications

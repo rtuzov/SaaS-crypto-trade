@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Toast,
   ToastClose,
@@ -7,13 +9,23 @@ import {
   ToastViewport,
 } from '@/components/ui/toast';
 import { useToast } from '@/components/ui/use-toast';
+import { useEffect, useState } from 'react';
 
 export function Toaster() {
+  const [mounted, setMounted] = useState(false);
   const { toasts } = useToast();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <ToastProvider>
-      {toasts.map(({ id, title, description, action, ...props }) => {
+      {toasts.map(function ({ id, title, description, action, ...props }) {
         return (
           <Toast key={id} {...props}>
             <div className="grid gap-1">

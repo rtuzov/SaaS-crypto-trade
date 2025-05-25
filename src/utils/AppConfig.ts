@@ -1,16 +1,16 @@
 import { BILLING_INTERVAL, type PricingPlan } from '@/types/Subscription';
 
 // FIXME: Update this configuration file based on your project information
-type LocalePrefix = 'as-needed' | 'always' | 'never';
 
-export type Locale = 'en' | 'ru';
-export const locales = ['en', 'ru'] as const;
-export const defaultLocale = 'en' as const;
+export const localeConfig = {
+  locales: ['en', 'ru', 'zh'] as const,
+  defaultLocale: 'en' as const,
+  localePrefix: 'always' as const,
+} as const;
+
+export type Locale = (typeof localeConfig.locales)[number];
 
 export const AppConfig = {
-  locales,
-  defaultLocale,
-  localePrefix: 'as-needed' as const,
   auth: {
     keycloak: {
       clientId: process.env.KEYCLOAK_CLIENT_ID || 'crypto-trade',
@@ -18,6 +18,13 @@ export const AppConfig = {
       issuer: process.env.KEYCLOAK_ISSUER || 'http://localhost:8080/realms/crypto-trade',
     },
   },
+  locales: [
+    { id: 'en', name: 'English' },
+    { id: 'ru', name: 'Русский' },
+    { id: 'zh', name: '中文' },
+  ],
+  name: 'Crypto Trade',
+  defaultLocale: 'en',
 } as const;
 
 export const PLAN_ID = {

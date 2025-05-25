@@ -1,0 +1,44 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: trading-platform
+  namespace: trading-platform
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/proxy-body-size: "50m"
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "60"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "60"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "60"
+spec:
+  tls:
+  - hosts:
+    - api.trading-platform.com
+    secretName: trading-platform-tls
+  rules:
+  - host: api.trading-platform.com
+    http:
+      paths:
+      - path: /api
+        pathType: Prefix
+        backend:
+          service:
+            name: trade-api
+            port:
+              number: 8000
+      - path: /executor
+        pathType: Prefix
+        backend:
+          service:
+            name: trade-executor
+            port:
+              number: 8000
+      - path: /analyzer
+        pathType: Prefix
+        backend:
+          service:
+            name: trade-analyzer
+            port:
+              number: 8000 

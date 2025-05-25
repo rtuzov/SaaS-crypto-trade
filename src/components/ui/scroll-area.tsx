@@ -1,0 +1,1 @@
+export const ScrollArea = (props: any) => <div {...props} />; 

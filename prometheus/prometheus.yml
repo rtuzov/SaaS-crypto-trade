@@ -1,0 +1,47 @@
+global:
+  scrape_interval: 15s
+  scrape_timeout: 10s
+  evaluation_interval: 15s
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+            - alertmanager:9093
+
+rule_files:
+  - 'rules/*.yml'
+  - rules/test_alerts.yml
+
+scrape_configs:
+  - job_name: prometheus
+    static_configs:
+      - targets: ['localhost:9090']
+
+  - job_name: trade-executor
+    static_configs:
+      - targets: ['trade-executor:8080']
+
+  - job_name: trade-monitor
+    static_configs:
+      - targets: ['trade-monitor:8080']
+
+  - job_name: historical-analytics
+    static_configs:
+      - targets: ['historical-analytics:8080']
+
+  - job_name: telegram-collector
+    static_configs:
+      - targets: ['telegram-collector:8080']
+
+  - job_name: postgres
+    static_configs:
+      - targets: ['postgres-exporter:9187']
+
+  - job_name: kafka
+    static_configs:
+      - targets: ['kafka-exporter:9308']
+
+  - job_name: grafana
+    static_configs:
+      - targets: ['grafana:3000']

@@ -7,18 +7,103 @@
     "try_again": "Try Again",
     "back_to_home": "Back to Home",
     "sign_in": "Sign In",
-    "sign_in_with_keycloak": "Sign in with Keycloak"
+    "sign_in_with_keycloak": "Sign in with Keycloak",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot password?",
+    "dontHaveAccount": "Don't have an account?",
+    "alreadyHaveAccount": "Already have an account?",
+    "termsAgree": "I agree to the terms of use",
+    "loginWith": "Or login with",
+    "registerWith": "Or register with",
+    "loginTitle": "Sign in",
+    "registerTitle": "Create an account"
+  },
+  "app": {
+    "name": "CryptoTrade"
+  },
+  "landing": {
+    "hero": {
+      "title": "Trade ahead of the market",
+      "subtitle": "Automate Binance futures trading and track real PnL in seconds.",
+      "ctaStart": "Start for free",
+      "ctaPricing": "View pricing"
+    },
+    "features": {
+      "auto": "Chat-based order execution",
+      "pnl": "True PnL in <500 ms",
+      "csv": "CSV retrospective analytics",
+      "security": "Keys encrypted with AES-256"
+    },
+    "how": {
+      "step1": "Connect your Binance API key",
+      "step2": "Send a chat command like \"BTC long 0.1\"",
+      "step3": "Watch your profit in real-time"
+    },
+    "faq": {
+      "q1": "Where are my API keys stored?",
+      "a1": "Keys are encrypted in our database; only you can decrypt them.",
+      "q2": "What fees do you charge?",
+      "a2": "We charge a flat subscription; no trade commissions.",
+      "q3": "Can I cancel anytime?",
+      "a3": "Yes. Cancel in Settings and your plan ends next cycle."
+    }
   },
   "Dashboard": {
     "title": "Dashboard",
-    "welcome": "Welcome",
+    "description": "Manage your crypto assets",
+    "welcome": "Welcome to your dashboard",
+    "total_balance": "Total Balance",
+    "available_balance": "Available Balance",
+    "in_trades": "In Trades",
+    "recent_transactions": "Recent Transactions",
+    "no_transactions": "No transactions",
+    "view_all": "View All",
     "welcome_message": "Welcome back, {name}!",
     "quick_actions": "Quick Actions",
     "start_trading": "Start Trading",
-    "view_settings": "View Settings",
+    "view_settings": "Settings",
     "account_summary": "Account Summary",
     "email": "Email",
-    "language": "Language"
+    "language": "Language",
+    "active_trades": "Active Trades",
+    "symbol": "Symbol",
+    "side": "Side",
+    "entry_price": "Entry Price",
+    "current_price": "Current Price",
+    "size": "Size",
+    "pnl": "PnL",
+    "time": "Time",
+    "no_active_trades": "No active trades",
+    "pnl_chart": "PnL Chart",
+    "transactions": "Transactions",
+    "profile": {
+      "title": "User Profile",
+      "login_to_view": "Please login to view",
+      "user": "User",
+      "admin": "Administrator",
+      "trader": "Trader",
+      "account_info": "Account Information",
+      "user_id": "User ID",
+      "registration_date": "Registration Date",
+      "status": "Status",
+      "active": "Active",
+      "not_specified": "Not specified"
+    },
+    "balance": {
+      "title": "User Balance",
+      "login_to_view": "Please login to view",
+      "total": "Total Balance",
+      "available": "Available",
+      "locked": "Locked",
+      "deposit_amount": "Deposit Amount",
+      "deposit_button": "Deposit",
+      "deposit_min": "Deposits are processed instantly. Minimum deposit amount is $1."
+    }
   },
   "Settings": {
     "title": "Settings",
@@ -30,15 +115,21 @@
     "logout": "Logout"
   },
   "Trade": {
-    "title": "Trading Platform",
-    "trading_platform": "Trading Platform",
-    "welcome_message": "Welcome to the trading platform, {name}!",
-    "market_overview": "Market Overview",
-    "btc_price": "Bitcoin Price",
-    "eth_price": "Ethereum Price",
-    "trading_pairs": "Trading Pairs",
-    "volume": "24h Volume",
-    "back_to_dashboard": "Back to Dashboard"
+    "title": "Trade Terminal",
+    "description": "Execute trades and monitor your positions",
+    "terminal_title": "Trade Command",
+    "symbol": "Symbol",
+    "side": "Side",
+    "long": "Long",
+    "short": "Short",
+    "size": "Size",
+    "execute": "Execute Trade",
+    "active_trades": "Active Trades",
+    "entry_price": "Entry Price",
+    "current_price": "Current Price",
+    "pnl": "PnL",
+    "close_trade": "Close Trade",
+    "actions": "Actions"
   },
   "Index": {
     "title": "Crypto Trading Platform",
@@ -54,5 +145,75 @@
       "analytics": "Analytics",
       "analytics_desc": "Advanced analytics and reporting tools"
     }
+  },
+  "Metadata": {
+    "title": "Trading SaaS - Automated Cryptocurrency Trading",
+    "description": "Automated trading platform for cryptocurrency futures",
+    "dashboard": {
+      "title": "Dashboard | Crypto Trading Platform",
+      "description": "Manage your crypto assets and monitor your portfolio"
+    },
+    "trade": {
+      "title": "Trade | Crypto Trading Platform",
+      "description": "Execute trades and monitor your positions"
+    },
+    "settings": {
+      "title": "Settings | Crypto Trading Platform",
+      "description": "Manage your account settings and preferences"
+    },
+    "analytics": {
+      "title": "Analytics | Crypto Trading Platform",
+      "description": "View detailed analytics and reports"
+    }
+  },
+  "Futures": {
+    "title": "Futures Monitoring",
+    "apiKey": "API Key",
+    "apiSecret": "API Secret",
+    "apiKeyPlaceholder": "Enter your API key",
+    "apiSecretPlaceholder": "Enter your API secret",
+    "totalPnl": "Total PnL",
+    "lastUpdate": "Last Update",
+    "symbol": "Symbol",
+    "side": "Side",
+    "size": "Size",
+    "entryPrice": "Entry Price",
+    "currentPrice": "Current Price",
+    "pnl": "PnL",
+    "pnlPercentage": "PnL %",
+    "stopLoss": "Stop Loss",
+    "takeProfit": "Take Profit",
+    "actions": "Actions",
+    "close": "Close",
+    "error": "Error",
+    "success": "Success",
+    "fetchError": "Failed to fetch positions",
+    "closeError": "Failed to close position",
+    "closeSuccess": "Position closed successfully"
+  },
+  "Home": {
+    "title": "Welcome to Crypto Trade",
+    "description": "Your all-in-one platform for crypto trading"
+  },
+  "Navigation": {
+    "dashboard": "Dashboard",
+    "trade": "Trading",
+    "analytics": "Analytics",
+    "account": "Account"
+  },
+  "Footer": {
+    "platform": "Platform",
+    "company": "Company",
+    "legal": "Legal",
+    "about": "About Us",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "terms": "Terms of Use",
+    "privacy": "Privacy Policy",
+    "copyright": "All rights reserved",
+    "dashboard": "Dashboard",
+    "trade": "Trading",
+    "analytics": "Analytics",
+    "description": "Professional cryptocurrency trading platform"
   }
 }

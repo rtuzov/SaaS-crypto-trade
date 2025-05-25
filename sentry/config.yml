@@ -1,0 +1,113 @@
+sentry:
+  dsn: ${SENTRY_DSN}
+  environment: ${ENVIRONMENT:-development}
+  traces_sample_rate: 1.0
+  profiles_sample_rate: 1.0
+  release: ${RELEASE:-1.0.0}
+  debug: ${DEBUG:-false}
+  enable_metrics: true
+  enable_profiling: true
+  enable_tracing: true
+  max_breadcrumbs: 100
+  max_value_size: 8192
+  max_message_length: 8192
+  max_request_body_size: 4096
+  max_request_headers: 50
+  max_request_cookies: 50
+  max_request_files: 10
+  max_request_files_size: 10485760
+  max_request_attachments: 10
+  max_request_attachments_size: 10485760
+  max_request_attachments_count: 10
+  max_request_attachments_size_per_file: 1048576
+  max_request_attachments_size_total: 10485760
+  max_request_attachments_count_per_file: 10
+  max_request_attachments_count_total: 100
+  max_request_attachments_size_per_file_total: 10485760
+  max_request_attachments_size_total_total: 104857600
+  max_request_attachments_count_per_file_total: 100
+  max_request_attachments_count_total_total: 1000
+
+redis:
+  host: redis
+  port: 6379
+  password: ${REDIS_PASSWORD:-}
+  db: 0
+  max_connections: 10
+  socket_timeout: 5
+  socket_connect_timeout: 5
+  retry_on_timeout: true
+  max_retries: 3
+
+postgres:
+  host: postgres
+  port: 5432
+  user: ${POSTGRES_USER:-postgres}
+  password: ${POSTGRES_PASSWORD:-postgres}
+  dbname: ${POSTGRES_DB:-trading}
+  max_connections: 20
+  min_connections: 5
+  idle_timeout: 300
+  max_lifetime: 3600
+  connect_timeout: 10
+  statement_timeout: 30000
+  lock_timeout: 30000
+  idle_in_transaction_session_timeout: 30000
+
+kafka:
+  bootstrap_servers: redpanda:9092
+  topics:
+    - trade-commands
+    - trade-events
+    - balance-alerts
+  consumer:
+    group_id: sentry-consumer
+    auto_offset_reset: earliest
+    enable_auto_commit: true
+    auto_commit_interval_ms: 5000
+    max_poll_interval_ms: 300000
+    session_timeout_ms: 10000
+    heartbeat_interval_ms: 3000
+    max_poll_records: 500
+  producer:
+    acks: all
+    retries: 3
+    batch_size: 16384
+    linger_ms: 1
+    buffer_memory: 33554432
+    compression_type: snappy
+
+email:
+  host: ${SMTP_HOST:-smtp.gmail.com}
+  port: ${SMTP_PORT:-587}
+  username: ${SMTP_USERNAME:-}
+  password: ${SMTP_PASSWORD:-}
+  use_tls: true
+  from_email: ${FROM_EMAIL:-noreply@trading.com}
+  to_email: ${TO_EMAIL:-admin@trading.com}
+
+integrations:
+  telegram:
+    enabled: true
+    bot_token: ${TELEGRAM_BOT_TOKEN:-}
+    chat_id: ${TELEGRAM_CHAT_ID:-}
+  slack:
+    enabled: true
+    webhook_url: ${SLACK_WEBHOOK_URL:-}
+  discord:
+    enabled: true
+    webhook_url: ${DISCORD_WEBHOOK_URL:-}
+
+rate_limiting:
+  enabled: true
+  rate: 100
+  burst: 200
+  period: 60
+  storage: redis
+  strategy: sliding_window
+  key_prefix: rate_limit
+  key_ttl: 3600
+  block_duration: 300
+  max_retries: 3
+  retry_delay: 1
+  retry_jitter: 0.1

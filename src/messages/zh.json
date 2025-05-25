@@ -1,0 +1,232 @@
+{
+  "Auth": {
+    "error_title": "认证错误",
+    "error_details": "错误详情",
+    "error_code": "错误代码",
+    "error_description": "错误描述",
+    "try_again": "重试",
+    "back_to_home": "返回首页",
+    "sign_in": "登录",
+    "sign_in_with_keycloak": "使用 Keycloak 登录"
+  },
+  "Dashboard": {
+    "title": "控制面板",
+    "description": "管理您的加密货币资产",
+    "welcome": "欢迎使用控制面板",
+    "total_balance": "总余额",
+    "available_balance": "可用余额",
+    "in_trades": "交易中",
+    "recent_transactions": "最近交易",
+    "no_transactions": "无交易",
+    "view_all": "查看全部",
+    "welcome_message": "欢迎回来，{name}！",
+    "quick_actions": "快速操作",
+    "start_trading": "开始交易",
+    "view_settings": "设置",
+    "account_summary": "账户摘要",
+    "email": "邮箱",
+    "language": "语言",
+    "active_trades": "活跃交易",
+    "symbol": "交易对",
+    "side": "方向",
+    "entry_price": "入场价格",
+    "current_price": "当前价格",
+    "size": "数量",
+    "pnl": "盈亏",
+    "time": "时间",
+    "no_active_trades": "无活跃交易",
+    "pnl_chart": "盈亏图表",
+    "transactions": "交易",
+    "profile": {
+      "title": "用户资料",
+      "login_to_view": "请登录查看",
+      "user": "用户",
+      "admin": "管理员",
+      "trader": "交易员",
+      "account_info": "账户信息",
+      "user_id": "用户ID",
+      "registration_date": "注册日期",
+      "status": "状态",
+      "active": "活跃",
+      "not_specified": "未指定"
+    },
+    "balance": {
+      "title": "用户余额",
+      "login_to_view": "请登录查看",
+      "total": "总余额",
+      "available": "可用",
+      "locked": "锁定",
+      "deposit_amount": "充值金额",
+      "deposit_button": "充值",
+      "deposit_min": "充值即时到账。最低充值金额为$1。"
+    }
+  },
+  "Footer": {
+    "platform": "平台",
+    "company": "公司",
+    "legal": "法律",
+    "about": "关于我们",
+    "pricing": "价格",
+    "contact": "联系我们",
+    "terms": "使用条款",
+    "privacy": "隐私政策",
+    "copyright": "版权所有",
+    "dashboard": "控制面板",
+    "trade": "交易",
+    "analytics": "分析",
+    "description": "专业的加密货币交易平台"
+  },
+  "Futures": {
+    "title": "期货监控",
+    "apiKey": "API密钥",
+    "apiSecret": "API密钥",
+    "apiKeyPlaceholder": "输入您的API密钥",
+    "apiSecretPlaceholder": "输入您的API密钥",
+    "totalPnl": "总盈亏",
+    "lastUpdate": "最后更新",
+    "symbol": "交易对",
+    "side": "方向",
+    "size": "数量",
+    "entryPrice": "入场价格",
+    "currentPrice": "当前价格",
+    "pnl": "盈亏",
+    "pnlPercentage": "盈亏百分比",
+    "stopLoss": "止损",
+    "takeProfit": "止盈",
+    "actions": "操作",
+    "close": "平仓",
+    "error": "错误",
+    "success": "成功",
+    "fetchError": "获取仓位失败",
+    "closeError": "平仓失败",
+    "closeSuccess": "平仓成功"
+  },
+  "Home": {
+    "title": "欢迎来到 Crypto Trade",
+    "description": "您的一站式加密交易平台"
+  },
+  "Index": {
+    "title": "加密货币交易平台",
+    "description": "专业的加密货币交易平台，具有高级功能",
+    "get_started": "开始使用",
+    "learn_more": "了解更多",
+    "features": {
+      "title": "特点",
+      "trading": "高级交易",
+      "trading_desc": "专业交易工具和实时市场数据",
+      "security": "安全",
+      "security_desc": "企业级资产安全",
+      "analytics": "分析",
+      "analytics_desc": "高级分析和报告工具"
+    }
+  },
+  "Metadata": {
+    "title": "加密货币交易平台",
+    "description": "专业的加密货币交易平台",
+    "dashboard": {
+      "title": "控制面板 | 加密货币交易平台",
+      "description": "管理您的加密货币资产和投资组合"
+    },
+    "trade": {
+      "title": "交易 | 加密货币交易平台",
+      "description": "执行交易并监控您的仓位"
+    },
+    "settings": {
+      "title": "设置 | 加密货币交易平台",
+      "description": "管理您的账户设置和偏好"
+    },
+    "analytics": {
+      "title": "分析 | 加密货币交易平台",
+      "description": "查看详细分析和报告"
+    }
+  },
+  "Navigation": {
+    "dashboard": "控制面板",
+    "trade": "交易",
+    "analytics": "分析",
+    "account": "账户"
+  },
+  "Settings": {
+    "title": "设置",
+    "description": "管理账户设置",
+    "account_settings": "账户设置",
+    "notifications": "通知",
+    "security": "安全",
+    "language": "语言",
+    "theme": "主题",
+    "save": "保存",
+    "cancel": "取消",
+    "profile": "个人资料",
+    "name": "姓名",
+    "preferences": "偏好设置",
+    "logout": "退出登录",
+    "exchanges": "交易所",
+    "api_key": "API密钥",
+    "validate": "验证"
+  },
+  "Trade": {
+    "title": "交易终端",
+    "description": "执行交易并监控您的仓位",
+    "terminal_title": "交易指令",
+    "symbol": "交易对",
+    "side": "方向",
+    "long": "做多",
+    "short": "做空",
+    "size": "数量",
+    "execute": "执行交易",
+    "active_trades": "活跃交易",
+    "entry_price": "入场价格",
+    "current_price": "当前价格",
+    "pnl": "盈亏",
+    "close_trade": "平仓",
+    "actions": "操作",
+    "buy": "买入",
+    "sell": "卖出",
+    "amount": "数量",
+    "price": "价格",
+    "total": "总计",
+    "confirm": "确认",
+    "cancel": "取消",
+    "trading_platform": "交易平台",
+    "market_overview": "市场概览",
+    "btc_price": "比特币价格",
+    "eth_price": "以太坊价格",
+    "trading_pairs": "交易对",
+    "volume": "24小时成交量",
+    "back_to_dashboard": "返回控制面板",
+    "chat": "信号聊天",
+    "order_form": "订单表单",
+    "history": "交易历史",
+    "latency": "延迟"
+  },
+  "app": {
+    "name": "CryptoTrade"
+  },
+  "landing": {
+    "hero": {
+      "title": "领先市场交易",
+      "subtitle": "自动化币安期货交易，实时跟踪真实PnL。",
+      "ctaStart": "免费开始",
+      "ctaPricing": "查看价格"
+    },
+    "features": {
+      "auto": "基于聊天的订单执行",
+      "pnl": "在<500毫秒内获得真实盈亏",
+      "csv": "CSV回顾分析",
+      "security": "使用AES-256加密的密钥"
+    },
+    "how": {
+      "step1": "连接您的币安API密钥",
+      "step2": "发送类似BTC long 0.1的聊天命令",
+      "step3": "实时查看您的利润"
+    },
+    "faq": {
+      "q1": "我的API密钥存储在哪里？",
+      "a1": "密钥在我们的数据库中加密；只有您可以解密它们。",
+      "q2": "您收取什么费用？",
+      "a2": "我们收取固定订阅费；没有交易佣金。",
+      "q3": "我可以随时取消吗？",
+      "a3": "是的。在设置中取消，您的计划将在下一个周期结束。"
+    }
+  }
+}

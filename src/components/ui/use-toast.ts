@@ -1,3 +1,5 @@
+'use client';
+
 import * as React from 'react';
 
 import type {
@@ -49,9 +51,9 @@ type Action =
     toastId?: ToasterToast['id'];
   };
 
-type State = {
+interface State {
   toasts: ToasterToast[];
-};
+}
 
 const toastTimeouts = new Map<string, ReturnType<typeof setTimeout>>();
 
@@ -90,8 +92,6 @@ export const reducer = (state: State, action: Action): State => {
     case 'DISMISS_TOAST': {
       const { toastId } = action;
 
-      // ! Side effects ! - This could be extracted into a dismissToast() action,
-      // but I'll keep it here for simplicity
       if (toastId) {
         addToRemoveQueue(toastId);
       } else {
@@ -170,7 +170,7 @@ function toast({ ...props }: Toast) {
   };
 }
 
-function useToast() {
+const useToast = () => {
   const [state, setState] = React.useState<State>(memoryState);
 
   React.useEffect(() => {
@@ -188,6 +188,6 @@ function useToast() {
     toast,
     dismiss: (toastId?: string) => dispatch({ type: 'DISMISS_TOAST', toastId }),
   };
-}
+};
 
-export { toast, useToast };
+export { useToast, toast };

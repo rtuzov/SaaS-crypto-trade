@@ -1,0 +1,185 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trade-executor
+  namespace: trading-platform
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: trade-executor
+  template:
+    metadata:
+      labels:
+        app: trade-executor
+    spec:
+      containers:
+      - name: trade-executor
+        image: ghcr.io/rtuzov/trading-platform/trade-executor:latest
+        ports:
+        - containerPort: 8000
+        env:
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: database-credentials
+              key: url
+        - name: REDIS_URL
+          valueFrom:
+            secretKeyRef:
+              name: redis-credentials
+              key: url
+        - name: KAFKA_BOOTSTRAP_SERVERS
+          valueFrom:
+            secretKeyRef:
+              name: kafka-credentials
+              key: bootstrap-servers
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        startupProbe:
+          httpGet:
+            path: /startup
+            port: 8000
+          failureThreshold: 30
+          periodSeconds: 10
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trade-analyzer
+  namespace: trading-platform
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: trade-analyzer
+  template:
+    metadata:
+      labels:
+        app: trade-analyzer
+    spec:
+      containers:
+      - name: trade-analyzer
+        image: ghcr.io/rtuzov/trading-platform/trade-analyzer:latest
+        ports:
+        - containerPort: 8000
+        env:
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: database-credentials
+              key: url
+        - name: REDIS_URL
+          valueFrom:
+            secretKeyRef:
+              name: redis-credentials
+              key: url
+        - name: KAFKA_BOOTSTRAP_SERVERS
+          valueFrom:
+            secretKeyRef:
+              name: kafka-credentials
+              key: bootstrap-servers
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        startupProbe:
+          httpGet:
+            path: /startup
+            port: 8000
+          failureThreshold: 30
+          periodSeconds: 10
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trade-api
+  namespace: trading-platform
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: trade-api
+  template:
+    metadata:
+      labels:
+        app: trade-api
+    spec:
+      containers:
+      - name: trade-api
+        image: ghcr.io/rtuzov/trading-platform/trade-api:latest
+        ports:
+        - containerPort: 8000
+        env:
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: database-credentials
+              key: url
+        - name: REDIS_URL
+          valueFrom:
+            secretKeyRef:
+              name: redis-credentials
+              key: url
+        - name: KAFKA_BOOTSTRAP_SERVERS
+          valueFrom:
+            secretKeyRef:
+              name: kafka-credentials
+              key: bootstrap-servers
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        startupProbe:
+          httpGet:
+            path: /startup
+            port: 8000
+          failureThreshold: 30
+          periodSeconds: 10 

@@ -3,10 +3,10 @@ export const TitleBar = (props: {
   description?: React.ReactNode;
 }) => (
   <div className="mb-8">
-    <div className="text-2xl font-semibold">{props.title}</div>
+    <div className="text-2xl font-semibold text-gray-900">{props.title}</div>
 
     {props.description && (
-      <div className="text-sm font-medium text-muted-foreground">
+      <div className="text-sm font-medium text-gray-600">
         {props.description}
       </div>
     )}

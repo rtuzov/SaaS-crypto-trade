@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: trade-executor
+  namespace: trading-platform
+spec:
+  selector:
+    app: trade-executor
+  ports:
+  - port: 8000
+    targetPort: 8000
+    protocol: TCP
+  type: ClusterIP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: trade-analyzer
+  namespace: trading-platform
+spec:
+  selector:
+    app: trade-analyzer
+  ports:
+  - port: 8000
+    targetPort: 8000
+    protocol: TCP
+  type: ClusterIP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: trade-api
+  namespace: trading-platform
+spec:
+  selector:
+    app: trade-api
+  ports:
+  - port: 8000
+    targetPort: 8000
+    protocol: TCP
+  type: ClusterIP 
